@@ -10,7 +10,7 @@ const clientSchema = new mongoose.Schema({
   companyName: String,
   OGRN: Number,
   password: String,
-  projects: [{ type: ObjectId, ref: "Company" }]
+  projects: Array
 });
 
 module.exports = {

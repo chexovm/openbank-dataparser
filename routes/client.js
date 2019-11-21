@@ -1,4 +1,5 @@
 const express = require("express");
+
 const router = express.Router();
 const mongoose = require("mongoose");
 
@@ -9,32 +10,33 @@ mongoose.connect("mongodb://localhost:27017/openbank", {
   useUnifiedTopology: true
 });
 
+router.get("/lk/:id", (req, res) => {
+  const client = Client.findById();
+  res.render("/client/lk");
+});
+
 router.get("/login", (req, res) => {
-  res.render("login");
+  res.render("clientlogin");
 });
 
 router.post("/login", (req, res) => {
   const client = Client.findOne({ INN: req.body.INN });
   if (client.password === req.body.password) {
     res.cookie("open", client.id);
-    res.redirect("lk");
+    res.redirect("/client/lk/:id");
   } else {
     res.send("Неверное ИНН или пароль");
   }
 });
 
-router.get("/banklogin", (req, res) => {
-  res.render("banklogin");
+router.get("/registration", (req, res) => {
+  res.render("clientregistration");
 });
 
-router.post("/banklogin", (req, res) => {
-  const analyst = Analyst.findOne({ username: req.body.username });
-  if (analyst.password === req.body.password) {
-    res.cookie("openbank", analyst.id);
-    res.redirect("banklk");
-  } else {
-    res.send("Неверное имя пользователя или пароль");
-  }
+router.post("/registration", (req, res) => {
+  // добавить проверку уже зарегистрированных клиентов
+  createClient.call(req.body);
+  res.redirect("/client/login");
 });
 
 module.exports = router;
