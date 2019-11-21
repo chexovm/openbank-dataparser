@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-family: Whitney A, Whitney B, -apple-system, Helvetica, Arial, sans-serif;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  background-color: #f2f7f9;
+  -webkit-font-feature-settings: "tnum", "tnum";
+  font-feature-settings: "tnum", "tnum";
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 15%;
+}
+
+#registrationInit {
+  animation-name: fade-in-opacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px 0 rgba(79, 93, 112, 0.03);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 442px;
+  margin: 15% 20% 10% 15%;
+  opacity: 1;
+  overflow: hidden;
+  padding: 40px 40px 40px 40px;
+  width: 70%;
+}
+#header {
+  align-items: center;
+  font-size: large;
+}
+
+input {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 8px;
+  /* cursor: pointer; */
+  padding: 0 20px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  border: 1px solid #999;
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #00b4e3;
+  outline: 0;
+}
+
+.button {
+  background-color: #00b4e3;
+  color: #fff;
+  height: 48px;
+  line-height: 46px;
+  padding: 0;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* font-size: 16px; */
+  width: 220px;
+}
+.button:hover {
+  color: #fff;
+  background-color: #26cef0;
+  border-color: #26cef0;
+  height: 48px;
+  line-height: 46px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 220px;
+}
