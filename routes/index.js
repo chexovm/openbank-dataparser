@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 
-const createClient = require("../seeder/client.js");
 const Analyst = require("../models/analyst.js");
 
 mongoose.connect("mongodb://localhost:27017/openbank", {

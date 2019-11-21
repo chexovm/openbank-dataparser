@@ -1,8 +1,8 @@
 const express = require("express");
-
 const router = express.Router();
 const mongoose = require("mongoose");
 
+const createClient = require("../seeder/client.js");
 const Client = require("../models/company.js");
 
 mongoose.connect("mongodb://localhost:27017/openbank", {
@@ -16,6 +16,8 @@ router.get("/lk/:id", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
+  console.log("login-client");
+
   res.render("clientlogin");
 });
 
@@ -30,12 +32,13 @@ router.post("/login", (req, res) => {
 });
 
 router.get("/registration", (req, res) => {
-  res.render("clientregistration");
+  res.render("client-registration");
 });
 
 router.post("/registration", (req, res) => {
   // добавить проверку уже зарегистрированных клиентов
   createClient.call(req.body);
+  console.log(req.body);
   res.redirect("/client/login");
 });
 

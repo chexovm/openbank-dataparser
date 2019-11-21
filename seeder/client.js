@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Client = require("../models/company.js");
+const { Client } = require("../models/client.js");
 
 mongoose.connect("mongodb://localhost:27017/openbank", {
   useNewUrlParser: true,
@@ -8,7 +8,7 @@ mongoose.connect("mongodb://localhost:27017/openbank", {
 
 // Создание клиента в БД
 async function createClient() {
-  Client.create({
+  const client = new Client({
     firstName: this.firstName,
     lastName: this.lastName,
     position: this.position,
@@ -19,6 +19,7 @@ async function createClient() {
     OGRN: this.OGRN,
     password: this.password
   });
+  await client.save();
 }
 
 module.exports = createClient;
