@@ -1,23 +1,35 @@
-<div>
-
-  <div class='client-lk header'>
-    <div>
-      <h1>Здравствуйте, {{firstName}}!</h1>
-    </div>
-    <div>
-      <div>
-        <a href='/project/new'>+ Новая заявка</a>
+<body id="client-lk-main-body">
+  <div class='client-lk-main-header'>
+    <h1 class='client-lk-main-headers'>Здравствуйте, {{firstName}}!</h1>
+    <div class='client-lk-main-header-element'>
+      <div class="button">
+        <a class="clientlk-a" href='/project/new'>+ Новая заявка</a>
       </div>
-      <div>
-        <a href='/logout'>Выход</a>
+      <div class="button">
+        <a class="clientlk-a" href='/logout'>Выход</a>
       </div>
     </div>
+    <h2 class="client-lk-main-headers">Активные заявки</h2>
   </div>
 
 
-  <ul>
-    {{#each projects}}
-    <li>{{this.companyName}}</li>
-    {{/each}}
+  <ul class="client-lk-main-div">
+    <div id='client-lk-main-div-list'>
+      {{#each projects}}
+      <li class='clientlk'>
+        <div class="clientlk-li-element"><b>Компания: </b>
+          {{this.companyName}}
+        </div>
+        <div class="clientlk-li-element">
+          <b> ИНН: </b>
+          {{this.INN}}
+        </div>
+        <div class="clientlk-li-element">
+          <b> Статус рассмотрения:</b>
+          {{this.status}}
+        </div>
+        <div class="clientlk-li-element">
+          <a href='/project/{{this._id}}'> Просмотр заявки </a> </div>
+      </li> {{/each}} </div>
   </ul>
-</div>
+</body>
