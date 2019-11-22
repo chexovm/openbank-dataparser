@@ -165,3 +165,35 @@ input {
 .client-lk-main-headers {
   text-align: center;
 }
+
+.project-main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.projectDivBlock {
+  background-color: white;
+  border: 2px solid #00b4e3;
+  box-shadow: 5px 12px 24px 5px rgba(79, 93, 112, 0.03);
+  font-size: medium;
+  border-radius: 8px;
+}
+
+#project-main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#project-backbutton {
+  align-self: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+#bank-lk-main-body {
+  display: flexbox;
+  justify-content: left;
+  flex-direction: column;
+}

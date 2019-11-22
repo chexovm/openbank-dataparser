@@ -1,17 +1,20 @@
-<div class='bank-lk header'>
-  <div>
-    <h1>Здравствуйте, {{firstName}}!</h1>
-  </div>
-  <div>
-    <a href='/logout'>Выход</a>
-  </div>
-</div>
+<body id="bank-lk-main-body">
 
+  <div class='client-lk-main-header'>
+    <h1 class='client-lk-main-headers'>Здравствуйте, {{firstName}}!</h1>
+    <div class='client-lk-main-header-element'>
+      <div class="button">
+        <a class="clientlk-a" href='/logout'>Выход</a>
+      </div>
+    </div>
+    <h2 class="client-lk-main-headers">Активные заявки</h2>
+  </div>
 
-{{#if projects}}
-<ul class='project-list'>
-  {{#each projects}}
-  <li class='project'><a href='/project'>{{projectTitle}}</a></li>
-  {{/each}}
-</ul>
-{{/if}}
+  {{#if projects}}
+  <ul class='project-list'>
+    {{#each projects}}
+    <li class='project'><a href='/project'>{{projectTitle}}</a></li>
+    {{/each}}
+  </ul>
+  {{/if}}
+</body>
