@@ -1,0 +1,9 @@
+<h1>Здравствуйте, {{firstName}}!</h1>
+
+{{#if projects}}
+<ul class='project-list'>
+  {{#each projects}}
+  <li class='project'><a href='/project'>{{projectTitle}}</a></li>
+  {{/each}}
+</ul>
+{{/if}}

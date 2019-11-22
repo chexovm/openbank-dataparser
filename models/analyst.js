@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
 const analystSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
   username: String,
   email: String,
   password: String

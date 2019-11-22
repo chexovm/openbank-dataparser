@@ -1,0 +1,20 @@
+<form method="post" action="/bank/login">
+  <ul id='registrationInit'>
+    <h1 id='header'>Вход в личный кабинет</h1>
+    <div>
+      <li class='list'>
+      <li class='list'>
+        <div> <label>Имя пользователя:</label></div>
+        <div><input class='checkFills' name="username" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Пароль:</label></div>
+        <div><input class='passCheck' id='password' name="password" placeholder="Обязательно" type="password"
+            value={{pass}}></div>
+      </li>
+    </div>
+  </ul>
+  <ul>
+    <div><input id='submit-button' class="button" type="submit" value="Отправить форму"></div>
+  </ul>
+</form>
