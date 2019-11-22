@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 const createClient = require("../seeder/client.js");
 const { Client } = require("../models/client.js");
+const { Company } = require("../models/company.js");
+
 
 mongoose.connect("mongodb://localhost:27017/openbank", {
   useNewUrlParser: true,

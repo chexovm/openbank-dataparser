@@ -70,3 +70,69 @@ async function createCompany() {
 }
 
 module.exports = createCompany;
+
+// async function seed() {
+//   for (let i = 0; i < 5; i++) {
+//     let company1 = new Company({
+//       companyName: `companyName ${i}`,
+//       projectName: `projectName ${i}`,
+//       industry: `industry ${i}`,
+//       projectDuration: `projectDuration ${i}`,
+//       yearOfFoundation: i,
+//       investments: i,
+//       netDebt: i,
+//       description: `description ${i}`,
+//       IRR: i,
+//       NPV: i,
+//       IRRTV: i,
+//       NPVTV: i,
+//       DPBP: i,
+//       TV: i,
+//       market: [`Array${i}`],
+//       sector1: [`Array${i}`],
+//       sector2: [`Array${i}`],
+//       sector3: [`Array${i}`],
+//       sector4: [`Array${i}`],
+//       competitor1: `competitor1 ${i}`,
+//       competitor2: `competitor2 ${i}`,
+//       competitor3: `competitor3 ${i}`,
+//       competitor4: `competitor4 ${i}`,
+//       competitor5: `competitor5 ${i}`,
+//       trend1: `trend1 ${i}`,
+//       trend2: `trend2 ${i}`,
+//       trend3: `trend3 ${i}`,
+//       trend4: `trend4 ${i}`,
+//       trend5: `trend5 ${i}`,
+//       revenue: [`Array${i}`],
+//       revenue1: [`Array${i}`],
+//       revenue2: [`Array${i}`],
+//       revenue3: [`Array${i}`],
+//       revenue4: [`Array${i}`],
+//       revenue5: [`Array${i}`],
+//       costPrice: [`Array${i}`],
+//       cost1: [`Array${i}`],
+//       cost2: [`Array${i}`],
+//       cost3: [`Array${i}`],
+//       cost4: [`Array${i}`],
+//       KiAUR: [`Array${i}`],
+//       EBTDA: [`Array${i}`],
+//       profitabilityEBTDA: [`Array${i}`],
+//       depreciation: [`Array${i}`],
+//       EBT: [`Array${i}`],
+//       interest: [`Array${i}`],
+//       incomeTax: [`Array${i}`],
+//       netProfit: [`Array${i}`],
+//       capitalExpenditures: [`Array${i}`],
+//       projectInvestments: [`Array${i}`],
+//       projectNetDebt: [`Array${i}`],
+//       cashFlow: [`Array${i}`],
+//       FCFF: [`Array${i}`],
+//       index1: i,
+//       index2: i,
+//       index3: i,
+//       index4: i
+//     });
+//     await company1.save();
+//   }
+// }
+// seed();
