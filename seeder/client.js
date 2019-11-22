@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Client } = require("../models/client.js");
 
-mongoose.connect("mongodb://localhost:27017/openbank", {
+mongoose.connect(mongoose_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

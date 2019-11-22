@@ -14,7 +14,7 @@ const app = express();
 
 // Подключаем mongoose.
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/openbank", {
+mongoose.connect(mongoose_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

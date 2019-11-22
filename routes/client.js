@@ -6,7 +6,7 @@ const createClient = require("../seeder/client.js");
 const { Client } = require("../models/client.js");
 const { Company } = require("../models/company.js");
 
-mongoose.connect("mongodb://localhost:27017/openbank", {
+mongoose.connect(mongoose_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
