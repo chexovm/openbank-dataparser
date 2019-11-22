@@ -3,16 +3,17 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 const createClient = require("../seeder/client.js");
-const Client = require("../models/company.js");
+const { Company } = require("../models/company.js");
+
 
 mongoose.connect("mongodb://localhost:27017/openbank", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
-router.get("/lk/:id", (req, res) => {
-  const client = Client.findById();
-  res.render("/client/lk");
+router.get("/lk", (req, res) => {
+  const client = Client.find();
+  res.render("client-lk", { projects: client });
 });
 
 router.get("/login", (req, res) => {

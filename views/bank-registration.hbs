@@ -1,0 +1,53 @@
+<form method="post" action="/client/registration">
+  <ul id='registrationInit'>
+    <h1 id='header'>Форма регистрации</h1>
+    <div>
+      <li class='list'>
+        <div><label>Имя представителя компании:</label></div>
+        <div><input class='checkFills' name="firstName" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Фамилия представителя компании:</label></div>
+        <div><input class='checkFills' name="*lastName*" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Должность в компании:</label></div>
+        <div><input class='checkFills' name="position" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Email в домене сайта компании:</label></div>
+        <div> <input class='checkFills' name="email" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Номер телефона:</label></div>
+        <div><input class='checkFills' name="phoneNumber" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div> <label>ИНН компании:</label></div>
+        <div><input class='checkFills' name="INN" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div> <label>Название компании:</label></div>
+        <div><input class='checkFills' name="companyName" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>ОГРН компании:</label></div>
+        <div> <input class='checkFills' name="OGRN" placeholder="Обязательно" type="text" value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Пароль:</label></div>
+        <div><input class='passCheck' id='password' name="password" placeholder="Обязательно" type="password"
+            value={{pass}}></div>
+      </li>
+      <li class='list'>
+        <div><label>Подтверждение пароля:</label></div>
+        <div><input class='passCheck' id='confirm' placeholder="Обязательно" type="password" value={{pass}}>
+        </div>
+      </li>
+    </div>
+  </ul>
+  <ul>
+    <div><input id='submit-button' class="button" type="submit" value="Отправить форму"></div>
+  </ul>
+</form>
+<script src="/js/confirmPass.js"> </script>
