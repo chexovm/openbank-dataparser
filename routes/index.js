@@ -21,4 +21,10 @@ router.get("/", async function(req, res, next) {
   } else res.render("index");
 });
 
+router.get("/logout", async (req, res) => {
+  res.clearCookie("clientsidelk");
+  res.clearCookie("banksidelk");
+  res.redirect("/");
+});
+
 module.exports = router;

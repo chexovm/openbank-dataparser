@@ -13,7 +13,13 @@ mongoose.connect("mongodb://localhost:27017/openbank", {
 
 router.get("/lk/:id", async (req, res) => {
   const client = await Client.findById(req.cookies["clientsidelk"]);
-  res.render("client-lk", { firstName: client.firstName });
+  let clientCollection = await Client.find();
+  console.log(clientCollection);
+
+  res.render("client-lk", {
+    firstName: client.firstName,
+    projects: clientCollection
+  });
 });
 
 router.get("/login", (req, res) => {
