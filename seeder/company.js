@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Company = require("../models/company.js");
+const { Company } = require("../models/company.js");
 
 mongoose.connect("mongodb://localhost:27017/openbank", {
   useNewUrlParser: true,

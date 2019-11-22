@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 
-const Client = require("../models/company.js");
-const Analyst = require("../models/analyst.js");
+const { Client } = require("../models/client.js");
+const { Analyst } = require("../models/analyst.js");
 
 mongoose.connect("mongodb://localhost:27017/openbank", {
   useNewUrlParser: true,
@@ -11,7 +11,7 @@ mongoose.connect("mongodb://localhost:27017/openbank", {
 });
 
 router.get("/login", (req, res) => {
-  res.render("banklogin");
+  res.render("bank-login");
 });
 
 router.post("/login", (req, res) => {
@@ -25,7 +25,7 @@ router.post("/login", (req, res) => {
 });
 
 router.get("/registration", (req, res) => {
-  res.render("bankregistration");
+  res.render("bank-registration");
 });
 
 router.post("/registration", async (req, res) => {
