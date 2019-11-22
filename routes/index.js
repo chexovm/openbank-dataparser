@@ -12,11 +12,11 @@ mongoose.connect("mongodb://localhost:27017/openbank", {
 
 router.get("/", async function(req, res, next) {
   if (req.cookies["clientsidelk"]) {
-    const client = await Client.findOne({ _id: req.cookies["open"] });
+    const client = await Client.findOne({ _id: req.cookies["clientsidelk"] });
     res.redirect(`/client/lk/${client.id}`);
   }
-  if (req.cookies["banlsidelk"]) {
-    const analyst = await Analyst.findOne({ _id: req.cookies["openbank"] });
+  if (req.cookies["banksidelk"]) {
+    const analyst = await Analyst.findOne({ _id: req.cookies["banksidelk"] });
     res.redirect(`/bank/lk/${analyst.id}`);
   } else res.render("index");
 });
