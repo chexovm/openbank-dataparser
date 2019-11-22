@@ -17,7 +17,7 @@ router.post("/login", async (req, res) => {
   const analyst = await Analyst.findOne({ username: req.body.username });
   if (analyst.password === req.body.password) {
     res.cookie("banksidelk", analyst.id);
-    res.redirect("/bank/lk/${analyst.id}");
+    res.redirect(`/bank/lk/${analyst.id}`);
   } else {
     res.send("Неверное имя пользователя или пароль");
   }
