@@ -17,7 +17,7 @@ router.get("/login", (req, res) => {
 router.post("/login", (req, res) => {
   const analyst = Analyst.findOne({ username: req.body.username });
   if (analyst.password === req.body.password) {
-    res.cookie("openbank", analyst.id);
+    res.cookie("banksidelk", analyst.id);
     res.redirect("/bank/lk/:id");
   } else {
     res.send("Неверное имя пользователя или пароль");
