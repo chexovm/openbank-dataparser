@@ -13,12 +13,14 @@ mongoose.connect("mongodb://localhost:27017/openbank", {
 
 router.get("/lk/:id", async (req, res) => {
   const client = await Client.findById(req.cookies["clientsidelk"]);
-  let clientCollection = await Client.find();
-  console.log(clientCollection);
-
+  const projectsId = client.projects;
+  const projectCollection = [];
+  for (let i in projectsId) {
+    projectCollection.push(await Company.findById(projectsId[i]));
+  }
   res.render("client-lk", {
     firstName: client.firstName,
-    projects: clientCollection
+    projects: projectCollection
   });
 });
 
@@ -28,7 +30,9 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
   const client = await Client.findOne({ INN: req.body.INN });
-  if (client.password === req.body.password) {
+  if (client === null) {
+    res.send("Пользователя с таким ИНН не существует");
+  } else if (client.password === req.body.password) {
     res.cookie("clientsidelk", client.id);
     res.redirect(`/client/lk/${client.id}`);
   } else {

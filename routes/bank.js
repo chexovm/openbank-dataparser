@@ -15,7 +15,9 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
   const analyst = await Analyst.findOne({ username: req.body.username });
-  if (analyst.password === req.body.password) {
+  if (analyst === null) {
+    res.send("Такого пользовтеля не существует");
+  } else if (analyst.password === req.body.password) {
     res.cookie("banksidelk", analyst.id);
     res.redirect(`/bank/lk/${analyst.id}`);
   } else {
