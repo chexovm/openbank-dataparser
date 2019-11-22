@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 const { Analyst } = require("../models/analyst.js");
+const { Company } = require("../models/company.js");
 
 mongoose.connect(process.env.MONGOOSE_URL, {
   useNewUrlParser: true,
@@ -45,7 +46,11 @@ router.post("/registration", async (req, res) => {
 
 router.get("/lk/:id", async (req, res) => {
   const analyst = await Analyst.findById(req.cookies["banksidelk"]);
-  res.render("bank-lk", { firstName: analyst.firstName });
+  const projectCollection = await Company.find();
+  res.render("bank-lk", {
+    firstName: analyst.firstName,
+    projects: projectCollection
+  });
 });
 
 module.exports = router;

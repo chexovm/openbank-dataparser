@@ -10,11 +10,23 @@
     <h2 class="client-lk-main-headers">Активные заявки</h2>
   </div>
 
-  {{#if projects}}
-  <ul class='project-list'>
-    {{#each projects}}
-    <li class='project'><a href='/project'>{{projectTitle}}</a></li>
-    {{/each}}
+  <ul class="client-lk-main-div">
+    <div>
+      {{#each projects}}
+      <li class='clientlk'>
+        <div class="clientlk-li-element"><b>Компания: </b>
+          {{this.companyName}}
+        </div>
+        <div class="clientlk-li-element">
+          <b>Название проекта: </b>
+          {{this.projectName}}
+        </div>
+        <div class="clientlk-li-element">
+          <b> Статус рассмотрения:</b>
+          {{this.status}}
+        </div>
+        <div class="clientlk-li-element">
+          <a href='/project/{{this._id}}'> Просмотр заявки </a> </div>
+      </li> {{/each}} </div>
   </ul>
-  {{/if}}
 </body>
