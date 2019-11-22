@@ -197,3 +197,8 @@ input {
   justify-content: left;
   flex-direction: column;
 }
+
+#indeximg {
+  margin-left: 30px;
+  margin-top: 20px;
+}
