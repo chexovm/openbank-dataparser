@@ -57,7 +57,8 @@ const companySchema = new mongoose.Schema({
   index1: Number,
   index2: Number,
   index3: Number,
-  index4: Number
+  index4: Number,
+  status: String
 });
 
 module.exports = {
