@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const Client = require("../../models/company.js");
 
-mongoose.connect(mongoose_url, {
+mongoose.connect(process.env.MONGOOSE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

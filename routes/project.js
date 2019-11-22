@@ -6,7 +6,7 @@ const { Company } = require("../models/company.js");
 const { Client } = require("../models/client.js");
 const createCompany = require("../seeder/company.js");
 
-mongoose.connect(mongoose_url, {
+mongoose.connect(process.env.MONGOOSE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

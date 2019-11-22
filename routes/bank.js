@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const { Analyst } = require("../models/analyst.js");
 
-mongoose.connect(mongoose_url, {
+mongoose.connect(process.env.MONGOOSE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

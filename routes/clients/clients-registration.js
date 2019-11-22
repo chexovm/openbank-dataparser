@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const createClient = require("../../seeder/client.js");
 
-mongoose.connect(mongoose_url, {
+mongoose.connect(process.env.MONGOOSE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

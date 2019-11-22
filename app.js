@@ -14,7 +14,7 @@ const app = express();
 
 // Подключаем mongoose.
 const mongoose = require("mongoose");
-mongoose.connect(mongoose_url, {
+mongoose.connect(process.env.MONGOOSE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
