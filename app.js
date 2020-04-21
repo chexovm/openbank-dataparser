@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const methodOverride = require("method-override");
 
+
 const indexRouter = require("./routes/index");
 const clientRouter = require("./routes/client");
 const bankRouter = require("./routes/bank");
